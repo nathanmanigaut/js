@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteo</title>
+
+</head>
+<style>
+    body {
+        background-image: url("img/paysage.jpg") ;
+        margin: 0 auto;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    #meteoCity {
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    #nameCity {
+        background-color: rgba(168, 168, 168, 0.5);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    #chooseCity {
+        background-color:rgba(255, 255, 255, 0.5);
+        margin: 0 auto;
+        width: 24%;
+        border-radius: 10px;
+    }
+
+    #conteneur {
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin: 0 auto;
+        width: 65%;
+    }
+
+    #bot{
+        font-style: italic;
+        display: flex;
+        justify-content: space-between;
+    }
+
+</style>
+
+<body>
+
+    <script src="meteoclass.js"></script>
+    <div id="chooseCity">
+        <h1>Tableau de bord météo</h1>
+        <button id="recupVille">Récupérer la liste des villes</button>
+        <label>Ville:</label>
+        <select type="select" id="listVille"></select>
+    </div>
+    <div id="conteneur">
+        <div id="nameCity"></div>
+        <div id="meteoCity">
+
+        </div>
+        <div id="bot">
+            
+        </div>
+    </div>
+</body>
+
+</html>

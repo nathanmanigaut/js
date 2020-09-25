@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteo</title>
+
+</head>
+<style>
+    body {
+        background-image: url("img/paysage.jpg") ;
+        margin: 0 auto;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    #meteoCity {
+        display: none;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    #nameCity {
+        background-color: rgba(168, 168, 168, 0.5);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    #chooseCity {
+        background-color:rgba(255, 255, 255, 0.5);
+        margin: 0 auto;
+        width: 24%;
+        border-radius: 10px;
+    }
+
+    #conteneur {
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin: 0 auto;
+        width: 65%;
+    }
+
+    #temp,
+    #vent {
+        font-size: 50px;
+        font-style: bold;
+    }
+
+    #bot{
+        font-style: italic;
+        display: flex;
+        justify-content: space-between;
+    }
+
+</style>
+
+<body>
+
+    <script src="meteo.js"></script>
+    <div id="chooseCity">
+        <h1>Tableau de bord météo</h1>
+        <button id="recupVille">Récupérer la liste des villes</button>
+        <label>Ville:</label>
+        <select type="select" id="listVille"></select>
+    </div>
+    <div id="conteneur">
+        <h1 id="nameCity"></h1>
+        <div id="meteoCity">
+
+            <div>
+                <h4>Température</h4>
+                <p id="temp"></p>
+            </div>
+
+            <div>
+                <h4>Vitesse du vent</h4>
+                <p id="vent"></p>
+            </div>
+            <div>
+                <h4>Orientation du vent</h4>
+
+                <h6>Nord</h6>
+                <p id="vitesse"></p>
+                <h6>Sud</h6>
+            </div>
+
+        </div>
+        <div id="bot">
+            <span id="coordonnés"></span>
+            <span id="date"></span>
+        </div>
+    </div>
+</body>
+
+</html>
